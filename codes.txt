@@ -1,0 +1,12 @@
+# Put this file in app/src/main/assets/codes.txt
+# Add one "power off" code per line. Formats:
+#   label|raw|frequency_hz|mark,space,mark,space,...   (microseconds)
+#   label|nec|ADDR_HEX|CMD_HEX
+#
+# Get raw codes for AC brands from the Flipper-IRDB repo (ACs folder):
+# each .ir file has "frequency:" and "data:" lines - copy those values here.
+# Most ACs send their full state (temp/mode/fan) with every press, so use the
+# "Off" signal, not "Power".
+#
+# Example (replace with real codes):
+# Example Brand Off|raw|38000|3500,1750,435,1300,435,435
