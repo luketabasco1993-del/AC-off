@@ -10,7 +10,8 @@ jobs:
       - name: Unpack project
         run: |
           unzip -q ACOffScanner.zip
-          if [ -f codes.txt ]; then cp codes.txt ACOffScanner/app/src/main/assets/codes.txt; fi
+          chmod -R u+w ACOffScanner
+          if [ -f codes.txt ]; then cp -f codes.txt ACOffScanner/app/src/main/assets/codes.txt; fi
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
